@@ -186,7 +186,7 @@ TextureImporter:
         width: 81
         height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -200,15 +200,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (16x16)_1
+      name: ground1
       rect:
         serializedVersion: 2
-        x: 95
-        y: 127
-        width: 82
-        height: 49
+        x: 97
+        y: 128
+        width: 47
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -230,7 +230,7 @@ TextureImporter:
         width: 66
         height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -252,7 +252,7 @@ TextureImporter:
         width: 50
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -274,7 +274,7 @@ TextureImporter:
         width: 50
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -296,7 +296,7 @@ TextureImporter:
         width: 50
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -318,7 +318,7 @@ TextureImporter:
         width: 81
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -337,10 +337,10 @@ TextureImporter:
         serializedVersion: 2
         x: 95
         y: 63
-        width: 82
+        width: 50
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -362,7 +362,7 @@ TextureImporter:
         width: 66
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -384,7 +384,7 @@ TextureImporter:
         width: 81
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -406,7 +406,7 @@ TextureImporter:
         width: 81
         height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -428,7 +428,7 @@ TextureImporter:
         width: 82
         height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -450,7 +450,7 @@ TextureImporter:
         width: 66
         height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -472,7 +472,7 @@ TextureImporter:
         width: 66
         height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -485,11 +485,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: ground2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 144
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ffa606d8ed471641bc54fad710b5301
+      internalID: -1092088542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ae9cc61539981e84bbd214a234dd2adf
     internalID: 0
     vertices: []
     indices: 
@@ -500,7 +522,6 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Terrain (16x16)_0: -4874278423985981231
-      Terrain (16x16)_1: 2492004042214043949
       Terrain (16x16)_10: 5587568460378422633
       Terrain (16x16)_11: 4987498479824627636
       Terrain (16x16)_12: 6480251376165907240
@@ -513,6 +534,8 @@ TextureImporter:
       Terrain (16x16)_7: 3020870990670601969
       Terrain (16x16)_8: 1685935324672158413
       Terrain (16x16)_9: 8022139226935704013
+      ground1: 2492004042214043949
+      ground2: -1092088542
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
