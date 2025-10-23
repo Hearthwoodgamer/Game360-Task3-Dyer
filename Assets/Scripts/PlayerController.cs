@@ -3,8 +3,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
-    public float moveSpeed = 5f;
-    public float jumpForce = 10f;
+    public float moveSpeed = 2.5f;
+    public float jumpForce = 5f;
 
     [Header("Combat")]
     public GameObject bulletPrefab;
