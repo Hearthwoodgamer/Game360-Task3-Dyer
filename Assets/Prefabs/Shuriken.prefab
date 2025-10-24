@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5760538292839550450}
   m_Layer: 0
   m_Name: Shuriken
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,6 +113,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   speed: 7.5
   lifetime: 3
+  FirePoint: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &7601977100395972417
 GameObject:
   m_ObjectHideFlags: 0

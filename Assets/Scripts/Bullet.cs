@@ -17,17 +17,8 @@ public class Bullet : MonoBehaviour
     {
 
 
-        float horizontal = Input.GetAxis("Horizontal");
-
-        
-        Vector2 flipper = Vector2.right;
-
-        if (horizontal < 0)
-            flipper = Vector2.left;
-        else if (horizontal > 0)
-            flipper = Vector2.right;
-
-        transform.Translate(flipper * speed * Time.deltaTime);
+  
+        transform.Translate(Vector2.right * speed * Time.deltaTime);
 
 
 

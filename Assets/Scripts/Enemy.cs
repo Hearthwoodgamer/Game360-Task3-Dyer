@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour
         {
             return;
         }
-
+        
         // Move enemy
         transform.position += Vector3.right * direction * moveSpeed * Time.deltaTime;
 
