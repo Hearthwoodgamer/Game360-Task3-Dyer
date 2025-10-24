@@ -40,7 +40,7 @@ public class UIManager : MonoBehaviour
 
         if (coinText != null)
         {
-            coinText.text = "Coins: 0";
+            coinText.text = "Cherries: 0";
         }
     }
 
@@ -87,7 +87,7 @@ public class UIManager : MonoBehaviour
         coinCount++;
         if (coinText != null)
         {
-            coinText.text = "Coins: " + coinCount;
+            coinText.text = "Cherries: " + coinCount;
         }
     }
 
