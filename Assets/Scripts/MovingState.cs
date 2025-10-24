@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class MovingState : PlayerState
 {
@@ -6,6 +7,8 @@ public class MovingState : PlayerState
     {
         TryPlayAnimation(player, "Run");
     }
+
+   
 
     public override void UpdateState(PlayerController player)
     {
@@ -19,6 +22,7 @@ public class MovingState : PlayerState
             player.spriteRenderer.flipX = true;
         else if (horizontal > 0)
             player.spriteRenderer.flipX = false;
+            
 
         if (Input.GetKeyDown(KeyCode.Space) && player.IsGrounded())
         {
@@ -33,6 +37,8 @@ public class MovingState : PlayerState
         {
             player.Fire();
         }
+
+        
     }
 
     public override void ExitState(PlayerController player) { }

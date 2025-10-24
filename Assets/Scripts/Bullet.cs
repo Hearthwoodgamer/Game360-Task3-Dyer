@@ -1,10 +1,13 @@
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
     public float speed = 15f;
     public float lifetime = 3f;
-
+    public GameObject FirePoint;
+    public PlayerController player;
+    
     void Start()
     {
         Destroy(gameObject, lifetime);
@@ -12,9 +15,27 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
-    }
 
+
+        float horizontal = Input.GetAxis("Horizontal");
+
+        
+        Vector2 flipper = Vector2.right;
+
+        if (horizontal < 0)
+            flipper = Vector2.left;
+        else if (horizontal > 0)
+            flipper = Vector2.right;
+
+        transform.Translate(flipper * speed * Time.deltaTime);
+
+
+
+
+
+
+    }
+    
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
