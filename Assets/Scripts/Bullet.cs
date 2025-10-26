@@ -6,9 +6,17 @@ public class Bullet : MonoBehaviour
     public float lifetime = 3f;
     public GameObject FirePoint;
     public PlayerController player;
+    public bool flipper = false;
+
+    private Rigidbody2D rb;
     
+
     void Start()
     {
+       
+
+        
+        
         Destroy(gameObject, lifetime);
     }
 
@@ -16,8 +24,17 @@ public class Bullet : MonoBehaviour
     {
 
 
-  
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
+        //if (Input.GetKeyDown(KeyCode.D))
+            //flipper = true;
+        //if (Input.GetKeyDown(KeyCode.A))
+            //flipper = false;
+        
+        //if (flipper == true)
+            transform.Translate(Vector2.right * speed * Time.deltaTime);
+        //if (flipper == false)
+            //transform.Translate(Vector2.left * speed * Time.deltaTime);
+
+
 
 
 
