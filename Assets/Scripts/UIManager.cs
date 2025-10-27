@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     public TMP_Text coinText;
     public GameObject gameOverPanel;
     public GameObject victoryPanel;
+    public GameObject pauseMenu;
 
     private int coinCount = 0;
 
@@ -23,6 +24,8 @@ public class UIManager : MonoBehaviour
         EventManager.Subscribe("OnGameOver", ShowGameOver); // GAME OVER
         EventManager.Subscribe("OnLevelComplete", ShowVictory); // VICTORY
         EventManager.Subscribe("OnCoinCollected", UpdateCoinCount);
+        EventManager.Subscribe("PauseGame", showPauseMenu);
+        EventManager.Subscribe("ResumeGame", hidePauseMenu);
 
         // Initialize
         if (gameOverPanel != null)
@@ -63,6 +66,8 @@ public class UIManager : MonoBehaviour
         EventManager.Unsubscribe("OnGameOver", ShowGameOver);
         EventManager.Unsubscribe("OnLevelComplete", ShowVictory);
         EventManager.Unsubscribe("OnCoinCollected", UpdateCoinCount);
+        EventManager.Unsubscribe("PauseGame", showPauseMenu);
+        EventManager.Unsubscribe("ResumeGame", hidePauseMenu);
     }
 
     void UpdateScore(object scoreData)
@@ -100,6 +105,11 @@ public class UIManager : MonoBehaviour
             victoryPanel.SetActive(false);
         }
 
+        if (pauseMenu != null)
+        {
+            pauseMenu.SetActive(false);
+        }
+
         // Show game over panel
         if (gameOverPanel != null)
         {
@@ -122,6 +132,11 @@ public class UIManager : MonoBehaviour
             gameOverPanel.SetActive(false);
         }
 
+        if (pauseMenu != null)
+        {
+            pauseMenu.SetActive(false);
+        }
+
         // Show victory panel
         if (victoryPanel != null)
         {
@@ -132,6 +147,20 @@ public class UIManager : MonoBehaviour
         {
             Debug.LogError("❌ Victory Panel is NULL!");
         }
+    }
+
+    public void showPauseMenu()
+    {
+    
+            pauseMenu.SetActive(true);
+    
+    
+    }
+
+    public void hidePauseMenu()
+    {
+        
+        pauseMenu.SetActive(false);
     }
 
     public void OnRestartButton()

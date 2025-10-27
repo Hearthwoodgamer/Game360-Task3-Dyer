@@ -52,7 +52,7 @@ public class Collectible : MonoBehaviour
 
         if (AudioManager.Instance != null && collectSound != null)
         {
-           // AudioManager.Instance.PlaySFX(collectSound);
+           AudioManager.Instance.PlaySFX(collectSound);
         }
         else if (AudioManager.Instance != null)
         {

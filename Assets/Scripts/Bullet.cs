@@ -27,17 +27,7 @@ public class Bullet : MonoBehaviour
         transform.Translate(Vector2.right * speed * Time.deltaTime);
 
 
-        //if (Input.GetKeyDown(KeyCode.D))
-            //flipper = true;
-        //if (Input.GetKeyDown(KeyCode.A))
-            //flipper = false;
         
-        //if (flipper == true)
-            transform.Translate(Vector2.right * speed * Time.deltaTime);
-        //if (flipper == false)
-            //transform.Translate(Vector2.left * speed * Time.deltaTime);
-
-
 
 
     }

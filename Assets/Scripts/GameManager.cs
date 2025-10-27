@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Xml;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -31,6 +32,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         InitializeGame();
+       
     }
 
     void Update()
@@ -43,6 +45,19 @@ public class GameManager : MonoBehaviour
             Debug.Log("Active: " + isGameActive);
             Debug.Log("Paused: " + isPaused);
             Debug.Log("TimeScale: " + Time.timeScale);
+        }
+
+        if (isGameActive && Input.GetKeyDown(KeyCode.Escape))
+        {
+
+            if (isGameActive && !isPaused)
+            {
+                PauseGame();
+            }
+            else
+            {
+                ResumeGame();
+            }
         }
 
         // Only update timer when game is active AND not paused
@@ -115,6 +130,7 @@ public class GameManager : MonoBehaviour
     public void PauseGame()
     {
         isPaused = true;
+        EventManager.TriggerEvent("PauseGame");
         Time.timeScale = 0f;
         Debug.Log("⏸️ Paused (TimeScale: " + Time.timeScale + ")");
     }
@@ -122,6 +138,7 @@ public class GameManager : MonoBehaviour
     public void ResumeGame()
     {
         isPaused = false;
+        EventManager.TriggerEvent("ResumeGame");
         Time.timeScale = 1f;
         Debug.Log("▶️ Resumed (TimeScale: " + Time.timeScale + ")");
     }
@@ -141,6 +158,11 @@ public class GameManager : MonoBehaviour
 
         // Reload scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
     public int GetScore() => score;
