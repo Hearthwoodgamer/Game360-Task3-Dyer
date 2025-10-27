@@ -66,6 +66,8 @@ public class PlayerController : MonoBehaviour
     {
         if (bulletPrefab != null && firePoint != null)
         {
+
+            
             Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
             AudioManager.Instance.PlayShootSound();
         }
