@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour
     [Header("Movement")]
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
+    public float dashForce = 10f;
 
     [Header("Combat")]
     public GameObject bulletPrefab;
@@ -42,6 +43,8 @@ public class PlayerController : MonoBehaviour
         {
             currentState.UpdateState(this);
         }
+
+        
     }
 
     public void ChangeState(PlayerState newState)

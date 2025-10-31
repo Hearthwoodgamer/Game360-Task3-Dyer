@@ -7,8 +7,8 @@ public class MovingState : PlayerState
         TryPlayAnimation(player, "Run");
     }
 
-   
 
+    //int dashcharge = 1;
     public override void UpdateState(PlayerController player)
     {
         float horizontal = Input.GetAxis("Horizontal");
@@ -38,6 +38,18 @@ public class MovingState : PlayerState
         }
 
         
+        //if (player.IsGrounded())
+        //{
+            //dashcharge = 1;
+        //}
+        //if (Input.GetKeyDown(KeyCode.LeftShift) && dashcharge == 1)
+        //{
+            //dashcharge = 0;
+            //Vector2 dashvelocity = player.rb.linearVelocity;
+            //dashvelocity.x = horizontal * player.dashForce;
+            //player.rb.linearVelocity = dashvelocity;
+            //Debug.Log("Dash used");
+        //}
     }
 
     public override void ExitState(PlayerController player) { }
